@@ -114,9 +114,10 @@ app.use("/",user);
   })
 
 //basic express setup
-// app.get("/",(req,res)=>{
-//     res.send("At root!!");
-// });
+app.get("/",(req,res)=>{
+    //res.send("At root!!");
+    res.redirect("/listings");
+});
 
  //middleware to handle error when user have sent request to an undefined path
  app.all("*",(req,res,next)=>{
